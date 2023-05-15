@@ -1,4 +1,4 @@
-package OOPlab.lab2.AimsProject;
+package OOPlab.lab2.Code.AimsProject;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;

@@ -1,4 +1,4 @@
-package OOPlab.lab2.AimsProject;
+package OOPlab.lab2.Code.AimsProject;
 
 public class Aims {
     public static void main(String[] args) {
