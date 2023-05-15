@@ -1,4 +1,4 @@
-package OOP_lab.lab1;
+package OOPlab.lab1;
 
 import javax.swing.JOptionPane;
 
