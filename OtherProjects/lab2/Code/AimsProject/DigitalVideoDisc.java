@@ -1,4 +1,4 @@
-package OOPlab.lab2.Code.AimsProject;
+package Code.AimsProject;
 
 public class DigitalVideoDisc {
     private String title;

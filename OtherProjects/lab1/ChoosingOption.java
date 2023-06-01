@@ -1,4 +1,3 @@
-package OOPlab.lab1;
 
 import javax.swing.JOptionPane;
 

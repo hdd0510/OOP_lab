@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+package hust.soict.dsai.aims.disc;
+=======
 package OOPlab.lab2.Code.AimsProject;
+>>>>>>> a19acefd7cc56ebce38ab47c9582307ac94885b2
 
 public class DigitalVideoDisc {
     private String title;

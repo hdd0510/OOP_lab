@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+package hust.soict.dsai.aims.store;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+=======
 package OOPlab.lab2.Code.AimsProject;
 
+>>>>>>> a19acefd7cc56ebce38ab47c9582307ac94885b2
 import java.util.ArrayList;
 
 public class Store {
