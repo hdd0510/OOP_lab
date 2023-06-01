@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-package hust.soict.dsai.test;
+package hust
+
+        .soict.dsai.test;
 
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
-=======
-package OOPlab.lab2.Code.AimsProject;
->>>>>>> a19acefd7cc56ebce38ab47c9582307ac94885b2
 
 public class StoreTest {
     public static void main(String[] args) {

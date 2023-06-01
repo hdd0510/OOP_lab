@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 package hust.soict.dsai.aims.Aims;
 
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import hust.soict.dsai.aims.cart.Cart;
-=======
-package Code.AimsProject;
->>>>>>> a19acefd7cc56ebce38ab47c9582307ac94885b2
 
 public class Aims {
     public static void main(String[] args) {
