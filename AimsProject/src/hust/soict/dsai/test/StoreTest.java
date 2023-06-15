@@ -1,6 +1,4 @@
-package hust
-
-        .soict.dsai.test;
+package hust.soict.dsai.test;
 
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
