@@ -2,7 +2,7 @@ package hust.soict.dsai.aims.media;
 
 import java.util.Comparator;
 
-public class Media {
+public abstract class Media {
     private int id;
     private String title;
     private String category;
