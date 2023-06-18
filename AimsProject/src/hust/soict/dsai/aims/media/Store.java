@@ -53,4 +53,16 @@ public class Store {
         return null;
     }
 
+    public void findByWord(String word) {
+        int count = 0;
+        for (Media media : itemsInStore) {
+            if (media.getTitle().toLowerCase().contains(word.toLowerCase())) {
+                System.out.println("Match an item: " + media.toString());
+                count += 1;
+            }
+        }
+        if (count == 0) {
+            System.out.println("No item found.");
+        }
+    }
 }

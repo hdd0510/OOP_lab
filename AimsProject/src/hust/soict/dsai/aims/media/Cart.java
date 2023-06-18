@@ -60,6 +60,20 @@ public class Cart {
         return null;
     }
 
+    // find is there any item that matches this word
+    public void findByWord(String word) {
+        int count = 0;
+        for (Media media : itemsOrdered) {
+            if (media.getTitle().toLowerCase().contains(word.toLowerCase())) {
+                System.out.println("Match an item: " + media.toString());
+                count += 1;
+            }
+        }
+        if (count == 0) {
+            System.out.println("No item found.");
+        }
+    }
+
     public void print() {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");

@@ -72,6 +72,17 @@ public abstract class Media {
         this.cost = cost;
     }
 
+    public boolean isMatch(String title) {
+        String[] keywords = title.toLowerCase().split(" ");
+        String discTitle = this.getTitle().toLowerCase();
+        for (String keyword : keywords) {
+            if (!discTitle.contains(keyword)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
