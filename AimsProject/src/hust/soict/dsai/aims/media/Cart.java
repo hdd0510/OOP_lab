@@ -44,7 +44,7 @@ public class Cart {
                 }
             }
         }
-        System.out.println("No dvd id = " + id);
+        System.out.println("No media id = " + id);
         return null;
     }
 
