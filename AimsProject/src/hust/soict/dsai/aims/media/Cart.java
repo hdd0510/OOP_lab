@@ -3,29 +3,42 @@ package hust.soict.dsai.aims.media;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import hust.soict.dsai.aims.exception.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
-    private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+    private static final int MAX_NUMBERS_ORDERED = 20;
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
-    public boolean addMedia(Media media) {
-        itemsOrdered.add(media);
-        System.out.println(media.getTitle() + " was added" + " to the cart.");
-        return true;
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
+
+    public boolean addMedia(Media medium) throws CartFullException {
+        if (this.itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
+            throw new CartFullException("The cart is full.");
+        } else {
+            boolean added = this.itemsOrdered.add(medium);
+            if (added) {
+                System.out.println(medium.getTitle() + " has been added to the cart.");
+            }
+            return added;
+        }
     }
 
     public int getVolume() {
         return this.itemsOrdered.size();
     }
 
-    public boolean removeMedia(Media media) {
-        if (itemsOrdered.contains(media)) {
-            itemsOrdered.remove(media);
-            System.out.println(media.getTitle() + " was removed" + " from the cart.");
-            return true;
+    public boolean removeMedia(Media media) throws NonExistingItemException {
+        boolean removed = itemsOrdered.remove(media);
+        if (removed) {
+            System.out.println(media.getTitle() + " was removed from the cart.");
         } else {
-            System.out.println("Item is not found in the cart.");
-            return false;
+            throw new NonExistingItemException(media.getTitle() + " is not in the cart.");
         }
+        return removed;
     }
 
     public float totalCost() {
@@ -86,6 +99,10 @@ public class Cart {
         res += String.format("Total cost: [%f] \n***************************************************",
                 this.totalCost());
         System.out.println(res);
+    }
+
+    public void setToBeEmpty() {
+        this.itemsOrdered.clear();
     }
 
     public void sortByTitle() {
