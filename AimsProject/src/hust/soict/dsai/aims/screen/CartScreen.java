@@ -72,7 +72,7 @@ public class CartScreen extends JFrame {
 		cd1.addTrack(track1);
 		cd1.addTrack(track2);
 		Cart myCart = new Cart();
-		CompactDisc cd2 = new CompactDisc("Allstars ", "Yes", "Smash Mouth", "Dunno", 230f);
+		CompactDisc cd2 = new CompactDisc("Allstars", "Yes", "Smash Mouth", "Dunno", 230f);
 		cd2.addTrack(track1);
 		cd2.addTrack(track3);
 		cd2.addTrack(track2);
