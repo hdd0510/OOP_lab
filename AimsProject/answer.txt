@@ -1,7 +1,0 @@
-If we are taking the Comparable interface approach, the class that should implement the Comparable interface is the class that represents the items in the cart. In this case, it would be the Media class.
-
-To reflect the ordering that we want, you would implement the compareTo() method in the Media class. Inside the compareTo() method, you would define the comparison logic based on the ordering criteria.
-
-With the Comparable interface approach, you cannot have two different ordering rules within the same class. The compareTo() method defines a single ordering for the objects. If you need different ordering rules, you would need to create separate classes or comparators for each ordering rule, as shown in the previous examples using the Comparator interface.
-
-By creating the DVD class as a subclass of Media and implementing the Comparable interface, you can define a different ordering rule specific to DVDs, where the comparison is first based on title, then decreasing length, and finally cost.
