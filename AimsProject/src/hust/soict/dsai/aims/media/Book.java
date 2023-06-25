@@ -3,6 +3,9 @@ package hust.soict.dsai.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
+import hust.soict.dsai.aims.exception.DupplicatedItemException;
+import hust.soict.dsai.aims.exception.NonExistingItemException;
+
 public class Book extends Media {
     private int contentLength;
     private List<String> authors = new ArrayList<String>();
@@ -12,28 +15,25 @@ public class Book extends Media {
         this.contentLength = contentLength;
     }
 
-    public void removeAuthor(String authorName) {
-        boolean check = false;
-        for (String author : authors) {
-            if (author == authorName) {
-                System.out.println(authorName + " has been removed");
-                authors.remove(authorName);
-                check = true;
-                break;
+    public void addAuthor(String authorName) throws DupplicatedItemException {
+        for (String name : this.authors) {
+            if (name.toLowerCase().equals(authorName.toLowerCase())) {
+                throw new DupplicatedItemException(name + " is already in the list of authors.");
             }
         }
-        if (check == false) {
-            System.out.println("Cannot find the author named " + authorName);
-        }
+        this.authors.add(authorName);
+        System.out.println(authorName + " has been added to the " + this.getTitle() + " list of authors.");
     }
 
-    public void addAuthor(String authorName) {
-        if (!authors.contains(authorName)) {
-            authors.add(authorName);
-            System.out.println("Author: " + authorName + "be added to the book");
-        } else {
-            System.out.println("Author: " + authorName + "is already associated to the book");
+    public void removeAuthor(String authorName) throws NonExistingItemException {
+        for (String name : this.authors) {
+            if (name.toLowerCase().equals(authorName.toLowerCase())) {
+                this.authors.remove(name);
+                System.out.println(name + " has been removed from the " + this.getTitle() + " list of authors.");
+                return;
+            }
         }
+        throw new NonExistingItemException(authorName + " is not in the list of authors.");
     }
 
     public List<String> getAuthors() {
