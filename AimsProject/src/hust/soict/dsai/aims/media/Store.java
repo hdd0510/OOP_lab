@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Store {
     private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
+    
     public void getItems() {
         System.out.println("All items available in store now are:");
         for (Media item : itemsInStore) {
@@ -65,4 +66,10 @@ public class Store {
             System.out.println("No item found.");
         }
     }
+
+    public ArrayList<Media> getItemsInStore() {
+        return itemsInStore;
+    }
+
+    
 }

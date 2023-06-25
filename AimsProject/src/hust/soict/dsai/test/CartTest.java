@@ -1,10 +1,11 @@
 package hust.soict.dsai.test;
 
+import hust.soict.dsai.aims.exception.CartFullException;
 import hust.soict.dsai.aims.media.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class CartTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CartFullException {
         Cart cart = new Cart();
 
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
